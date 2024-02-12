@@ -39,9 +39,9 @@ function isPositive(number) {
  *  -0.1, 0, 0.2  => 0.2
  */
 function getMaxNumber(a, b, c) {
-  if (a >= b && a >= c) return a;
-  if (b >= a && b >= c) return b;
-  if (c >= a && c >= b) return c;
+  let max = a > b ? a : b;
+  max = max > c ? max : c;
+  return max;
 }
 
 /**
@@ -86,9 +86,9 @@ function canQueenCaptureKing(/* queen, king */) {
  */
 function isIsoscelesTriangle(a, b, c) {
   if (a > 0 && b > 0 && c > 0) {
-  if (a === b && a + b > c) return true;
-  if (a === c && a + c > b) return true;
-  if (b === c && b + c > a) return true;
+    if (a === b && a + b > c) return true;
+    if (a === c && a + c > b) return true;
+    if (b === c && b + c > a) return true;
   }
   return false;
 }
